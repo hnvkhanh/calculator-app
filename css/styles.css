@@ -3,6 +3,7 @@ body {
   padding: 5% 0%;
 }
 
+/*theme selection*/
 .theme-btn {
   text-align: right;
   padding: 0;
@@ -38,6 +39,19 @@ body {
   background-color: hsl(223, 31%, 20%);
   border-radius: 30px;
   padding: 8% 0%;
+}
+
+/*screen*/
+.screen {
+  font-size: 41.6px;
+  text-align: right;
+  padding: 5%;
+  margin: 10% 10%;
+  border-radius: 10px;
+  background-color: hsl(224, 36%, 15%);
+}
+.screen p {
+  margin: 0;
 }
 
 body {
