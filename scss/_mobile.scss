@@ -76,21 +76,30 @@ body{
 
 .square-key{
     background-color: $theme1-key-background-grayish-orange;
-    padding: 2% 1%;      
+    padding: 1%;      
     color: $theme1-text-grayish-blue;    
-    margin: 2%;
+    margin: 3% 2%;
     border-radius: 8px;
     font-size: $number-font-size;
+    box-shadow: 0px 4px 0px $theme1-key-shadow-grayish-orange;    
 
     &.specical-key{
-        font-size: 1.2rem;  
-        padding: 5.65% 1%;  
+        font-size: 15px;                     
         background-color: $theme1-key-background-dark-blue;  
-        color: $white;        
+        color: $white;   
+        box-shadow: 0px 4px 0px $theme1-key-shadow-dark-blue;   
+
+        .col{
+            padding: 0;
+        }
+                
     }
 
     &.equal-key{
         background-color: $theme1-key-toggle-background-red;
         color: $white;
+        box-shadow: 0px 4px 0px $theme1-key-shadow-dark-red;  
     }
 }
+
+
