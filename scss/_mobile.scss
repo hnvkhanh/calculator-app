@@ -1,23 +1,47 @@
 body{
-    padding: 15% 8%;    
+    padding: 5% 0%;    
 }
 
-.theme-btn{   
-    text-align: right; 
-    div:first-of-type {
-        font-size: 0.75rem;            
+
+.theme-btn{       
+    text-align: right;   
+    padding: 0;  
+    div{
+        font-size: 0.45rem;                     
     }
     p{        
         font-size: 0.6rem;
-        margin: 0;
-    }
+        margin: 0;        
+    }   
+        
 }
 
 .selection{
-    height: 20px;    
-    padding: 0;
+    text-align: right; 
+    height: 100%;        
+    padding: 0;    
+    border-radius: 10px;      
+
+    .col{                
+        padding: 0;
+        margin: 0;              
+    }    
+    button{
+        height: 75%;  
+        width: 55%;              
+        border-radius: 50%;  
+        background-color: $theme1-key-toggle-background-red;  
+        color: $theme1-key-toggle-background-red;   
+        border: none;
+        
+    }
+
+}
+
+.btn-area{
     background-color: $theme1-toggle-keypad-background;
-    border-radius: 10px;
+    border-radius: 30px;
+    padding: 8% 0%;    
 }
 
 
