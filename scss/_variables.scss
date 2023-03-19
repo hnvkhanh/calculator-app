@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+$white: hsl(0, 0%, 100%);
+
+$theme1-main-background: hsl(222, 26%, 31%);
+$theme1-toggle-keypad-background: hsl(223, 31%, 20%);
+$theme1-screen-background: hsl(224, 36%, 15%);
+$theme1-key-background-dark-blue: hsl(225, 21%, 49%);
+$theme1-key-shadow-dark-blue: hsl(224, 28%, 35%);
+$theme1-key-toggle-background-red: hsl(6, 63%, 50%);
+$theme1-key-shadow-dark-red: hsl(6, 70%, 34%);
+$theme1-key-background-grayish-orange: hsl(30, 25%, 89%);
+$theme1-key-shadow-grayish-orange: hsl(28, 16%, 65%);
+$theme1-text-grayish-blue: hsl(221, 14%, 31%);
+
+$theme2-main-background: hsl(0, 0%, 90%);
+$theme2-toggle-keypad-background: hsl(0, 5%, 81%);
+$theme2-screen-background: hsl(0, 0%, 93%);
+$theme2-key-background-cyan: hsl(185, 42%, 37%);
+$theme2-key-shadow-cyan: hsl(185, 58%, 25%);
+$theme2-key-toggle-background-orange: hsl(25, 98%, 40%);
+$theme2-key-shadow-orange: hsl(25, 99%, 27%);
+$theme2-key-background-grayish-yellow: hsl(45, 7%, 89%);
+$theme2-key-shadow-grayish-orange: hsl(35, 11%, 61%);
+$theme2-text-grayish-yellow: hsl(60, 10%, 19%);
+
+$theme3-main-background: hsl(268, 75%, 9%);
+$theme3-toggle-keypad-background: hsl(268, 71%, 12%);
+$theme3-key-background-dark-violet: hsl(281, 89%, 26%);
+$theme3-key-shadow-vivid-magenta: hsl(285, 91%, 52%);
+$theme3-key-toggle-background-cyan: hsl(176, 100%, 44%);
+$theme3-key-shadow-cyan: hsl(177, 92%, 70%);
+$theme3-key-background-very-dark-violet: hsl(268, 47%, 21%);
+$theme3-key-shadow-dark-magenta: hsl(290, 70%, 36%);
+$theme3-text-light-yellow: hsl(52, 100%, 62%);
+$theme3-text-very-dark-blue: hsl(198, 20%, 13%);
+
+$mobile-screen-size: 375px;
+$desktop-screen-size: 1440px;
+
+$number-font-size: 32px;
+
+$font-family: 'League Spartan', sans-serif;
