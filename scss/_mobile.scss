@@ -1,0 +1,23 @@
+body{
+    padding: 15% 8%;    
+}
+
+.theme-btn{   
+    text-align: right; 
+    div:first-of-type {
+        font-size: 0.75rem;            
+    }
+    p{        
+        font-size: 0.6rem;
+        margin: 0;
+    }
+}
+
+.selection{
+    height: 20px;    
+    padding: 0;
+    background-color: $theme1-toggle-keypad-background;
+    border-radius: 10px;
+}
+
+

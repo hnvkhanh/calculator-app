@@ -1,5 +1,8 @@
 @import "./variables";
+@import  "./mobile";
 
-*{
+body{
     font-family: $font-family;
+    background-color: $theme1-main-background;
+    color: $white;      
 }
