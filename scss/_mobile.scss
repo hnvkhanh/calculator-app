@@ -1,117 +1,132 @@
-body{
-    padding: 5% 0%;    
+body {
+    padding: 5% 0%;
 }
 
-/*theme selection*/
+@mixin mobile($screen-background,
+    $toggle-keypad-background,
+    $special-key-bg,
+    $special-key-shadow,
+    $equal-key-bg,
+    $equal-key-shadow,
+    $key-hover-bg,
+    $key-bg,
+    $key-text-color,
+    $key-shadow) {
 
-.theme-btn{       
-    text-align: right;   
-    padding: 0;  
-    div{
-        font-size: 0.45rem;                     
-    }
-    p{        
-        font-size: 0.6rem;
-        margin: 0;        
-    }   
-        
-}
 
-.selection{
-    text-align: right; 
-    height: 100%;        
-    padding: 0;    
-    border-radius: 10px;      
+    /*theme selection*/
 
-    .col{                
+    .theme-btn {
+        text-align: right;
         padding: 0;
-        margin: 0;              
-    }    
-    button{
-        height: 75%;  
-        width: 55%;              
-        border-radius: 50%;  
-        background-color: $theme1-key-toggle-background-red;  
-        color: $theme1-key-toggle-background-red;   
-        border: none;
-        
+
+        div {
+            font-size: 0.45rem;
+        }
+
+        p {
+            font-size: 0.6rem;
+            margin: 0;
+        }
+
     }
 
-}
-
-.btn-area{
-    background-color: $theme1-toggle-keypad-background;
-    border-radius: 30px;
-    padding: 8% 0%;    
-}
-
-
-/*screen*/
-
-.screen{
-    font-size: $number-font-size * 1.3;    
-    justify-content: right;
-    padding: 5%;
-    margin: 10%;
-    border-radius: 10px;
-    background-color: $theme1-screen-background;
-    min-height: 15vh;    
-
-    p{
-        margin: 0;
-    }
-}
-
-
-/*buttons area*/
-
-.buttons-area{
-    margin: 10%; 
-    
-    .container{
-        padding: 7% 10%;
-        background-color: $theme1-toggle-keypad-background;
+    .selection {
+        text-align: right;
+        height: 100%;
+        padding: 0;
         border-radius: 10px;
-    }
-}
 
-.square-key{
-    background-color: $theme1-key-background-grayish-orange;
-    padding: 1%;      
-    color: $theme1-text-grayish-blue;    
-    margin: 3% 2%;
-    border-radius: 8px;
-    font-size: $number-font-size;
-    box-shadow: 0px 4px 0px $theme1-key-shadow-grayish-orange;    
-
-    &:hover{
-        background-color: $white;
-    }
-
-    &.specical-key{
-        font-size: 15px;                     
-        background-color: $theme1-key-background-dark-blue;  
-        color: $white;   
-        box-shadow: 0px 4px 0px $theme1-key-shadow-dark-blue;   
-
-        .col{
+        .col {
             padding: 0;
+            margin: 0;
         }
-        
-        &:hover{
-            filter: brightness(140%);
+
+        button {
+            height: 75%;
+            width: 55%;
+            border-radius: 50%;
+            background-color: $theme1-key-toggle-background-red;
+            color: $theme1-key-toggle-background-red;
+            border: none;
+
+        }
+
+    }
+
+    .btn-area {
+        background-color: $toggle-keypad-background;
+        border-radius: 30px;
+        padding: 8% 0%;
+    }
+
+
+    /*screen*/
+
+    .screen {
+        font-size: $number-font-size * 1.3;
+        justify-content: right;
+        padding: 5%;
+        margin: 10%;
+        border-radius: 10px;
+        background-color: $screen-background;
+        min-height: 15vh;
+
+        p {
+            margin: 0;
         }
     }
 
-    &.equal-key{
-        background-color: $theme1-key-toggle-background-red;
-        color: $white;
-        box-shadow: 0px 4px 0px $theme1-key-shadow-dark-red; 
-        
-        &:hover{
-            filter: brightness(140%);
+
+    /*buttons area*/
+
+    .buttons-area {
+        margin: 10%;
+
+        .container {
+            padding: 7% 10%;
+            background-color: $toggle-keypad-background;
+            border-radius: 10px;
         }
     }
+
+    .square-key {
+        background-color: $key-bg;
+        padding: 1%;
+        color: $key-text-color;
+        margin: 3% 2%;
+        border-radius: 8px;
+        font-size: $number-font-size;
+        box-shadow: 0px 4px 0px $key-shadow;
+
+        &:hover {
+            background-color: $key-hover-bg;
+        }
+
+        &.specical-key {
+            font-size: 15px;
+            background-color: $special-key-bg;
+            color: $white;
+            box-shadow: 0px 4px 0px $special-key-shadow;
+
+            .col {
+                padding: 0;
+            }
+
+            &:hover {
+                filter: brightness(140%);
+            }
+        }
+
+        &.equal-key {
+            background-color: $equal-key-bg;
+            color: $white;
+            box-shadow: 0px 4px 0px $equal-key-shadow;
+
+            &:hover {
+                filter: brightness(140%);
+            }
+        }
+    }
+
 }
-
-

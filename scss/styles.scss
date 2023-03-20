@@ -2,7 +2,19 @@
 @import  "./mobile";
 
 body{
-    font-family: $font-family;
+    font-family: $font-family;         
+}
+.theme-1 {
     background-color: $theme1-main-background;
-    color: $white;      
+    color: $white;
+    @include mobile($theme1-screen-background,
+        $theme1-toggle-keypad-background,
+        $theme1-key-background-dark-blue,
+        $theme1-key-shadow-dark-blue,
+        $theme1-key-toggle-background-red,
+        $theme1-key-shadow-dark-red,
+        $white,
+        $theme1-key-background-grayish-orange,
+        $theme1-text-grayish-blue,
+        $theme1-key-shadow-grayish-orange );
 }
