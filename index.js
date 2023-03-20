@@ -5,6 +5,7 @@ let deleteKey = document.getElementById("key-delete");
 let equalSign = document.getElementById("equal-sign");
 let resetKey = document.getElementById("reset-calc");
 let textOnScreen = document.getElementById("text-on-screen");
+let startFontSize = parseFloat(window.getComputedStyle(textOnScreen, null).getPropertyValue('font-size'));
 let dotKeyClicked = false;
 let operatorClicked = false;
 let clickedKeys = [];
@@ -22,16 +23,20 @@ function processMath(operator, a, b) {
           return a / b;
         default:
           return a * b;
-    }
-      
+    }      
 }
 
+function adjustText(textOnScreen) {
+    let adjustPara = Math.floor(textOnScreen.innerText.length / 8);    
+    textOnScreen.style.fontSize = (startFontSize * Math.pow(0.7, adjustPara)).toString() + "px";    
+}
 
 keys.forEach((key) =>{
     key.addEventListener("click", () => {
         clickedKeys.push(key.innerHTML);
-        clickedString = clickedKeys.reduce((a, b) => {return a + b;});      
+        clickedString = clickedKeys.reduce((a, b) => {return a + b;});            
         textOnScreen.innerText = clickedString.replace(".", ",");  
+        adjustText(textOnScreen);  
     })
 })
 
@@ -55,11 +60,18 @@ operators.forEach((operator) => {
             operatorClicked = true;            
         }
         else{
-            inputNum = processMath(currentOperator, inputNum, parseFloat(clickedString))
-            clickedString = "";
-            clickedKeys = [];
-            textOnScreen.innerText = inputNum;
-            currentOperator = operator.innerText;
+            if (clickedString.length > 0){
+                inputNum = processMath(currentOperator, inputNum, parseFloat(clickedString));
+                inputNum = Math.round(inputNum * 10000000) / 10000000;
+                clickedString = "";
+                clickedKeys = [];                
+                textOnScreen.innerText = inputNum.toString().replace(".", ",");
+                adjustText(textOnScreen);
+                currentOperator = operator.innerText;
+            }
+            else{
+                currentOperator = operator.innerText;
+            }            
         }        
     });    
 });
@@ -69,13 +81,15 @@ equalSign.addEventListener("click", () => {
     if (operatorClicked){
         if (clickedString.length > 0){
             inputNum = processMath(currentOperator, inputNum, parseFloat(clickedString));
-            clickedString = inputNum;
+            inputNum = Math.round(inputNum * 10000000) / 10000000;
+            clickedString = inputNum.toString();
         }
         else{
             clickedString = "Invalid value"
         }        
-        clickedKeys = [];
-        textOnScreen.innerText = clickedString;
+        clickedKeys = [];                
+        textOnScreen.innerText = clickedString.replace(".", ",");
+        adjustText(textOnScreen);
         operatorClicked = false;
     }    
 });
@@ -85,8 +99,9 @@ resetKey.addEventListener("click", () => {
     clickedString = "0";
     clickedKeys = [];
     currentOperator = undefined;
-    operatorClicked = false;
+    operatorClicked = false;    
     textOnScreen.innerText = 0;
+    adjustText(textOnScreen);
 });
 
 deleteKey.addEventListener("click", () => {
@@ -99,6 +114,8 @@ deleteKey.addEventListener("click", () => {
     }
     if (deleteKey == "."){
         dotKeyClicked = false;
-    }
+    }    
     textOnScreen.innerText = clickedString.replace(".", ",");
-})
+    adjustText(textOnScreen);
+});
+
