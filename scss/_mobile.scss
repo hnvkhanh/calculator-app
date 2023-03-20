@@ -83,6 +83,10 @@ body{
     font-size: $number-font-size;
     box-shadow: 0px 4px 0px $theme1-key-shadow-grayish-orange;    
 
+    &:hover{
+        background-color: $white;
+    }
+
     &.specical-key{
         font-size: 15px;                     
         background-color: $theme1-key-background-dark-blue;  
@@ -92,13 +96,20 @@ body{
         .col{
             padding: 0;
         }
-                
+        
+        &:hover{
+            filter: brightness(140%);
+        }
     }
 
     &.equal-key{
         background-color: $theme1-key-toggle-background-red;
         color: $white;
-        box-shadow: 0px 4px 0px $theme1-key-shadow-dark-red;  
+        box-shadow: 0px 4px 0px $theme1-key-shadow-dark-red; 
+        
+        &:hover{
+            filter: brightness(140%);
+        }
     }
 }
 
