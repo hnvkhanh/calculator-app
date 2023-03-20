@@ -11,7 +11,8 @@ body {
     $key-hover-bg,
     $key-bg,
     $key-text-color,
-    $key-shadow) {
+    $key-shadow,
+    $select-btn) {
 
 
     /*theme selection*/
@@ -46,8 +47,8 @@ body {
             height: 75%;
             width: 55%;
             border-radius: 50%;
-            background-color: $theme1-key-toggle-background-red;
-            color: $theme1-key-toggle-background-red;
+            background-color: $select-btn;
+            color: $select-btn;
             border: none;
 
         }
@@ -100,7 +101,7 @@ body {
         box-shadow: 0px 4px 0px $key-shadow;
 
         &:hover {
-            background-color: $key-hover-bg;
+            background-color: $key-hover-bg;            
         }
 
         &.specical-key {
