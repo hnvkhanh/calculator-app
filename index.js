@@ -67,10 +67,15 @@ operators.forEach((operator) => {
 equalSign.addEventListener("click", () => {
     dotKeyClicked = false;
     if (operatorClicked){
-        inputNum = processMath(currentOperator, inputNum, parseFloat(clickedString));
-        clickedString = inputNum;
+        if (clickedString.length > 0){
+            inputNum = processMath(currentOperator, inputNum, parseFloat(clickedString));
+            clickedString = inputNum;
+        }
+        else{
+            clickedString = "Invalid value"
+        }        
         clickedKeys = [];
-        textOnScreen.innerText = inputNum;
+        textOnScreen.innerText = clickedString;
         operatorClicked = false;
     }    
 });
