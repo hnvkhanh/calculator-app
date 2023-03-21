@@ -51,6 +51,10 @@ body {
             color: $select-btn;
             border: none;
 
+            &:hover{
+                filter: brightness(140%);
+            }
+
         }
 
     }

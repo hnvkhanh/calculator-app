@@ -1,5 +1,7 @@
 var keys = document.querySelectorAll("#key-number");
 var operators = document.querySelectorAll("#operator");
+var toggleBtns = document.querySelectorAll("#toggle-btn");
+let bodyElement = document.querySelector("body");
 let dotKey = document.getElementById("key-dot");
 let deleteKey = document.getElementById("key-delete");
 let equalSign = document.getElementById("equal-sign");
@@ -119,3 +121,15 @@ deleteKey.addEventListener("click", () => {
     adjustText(textOnScreen);
 });
 
+console.log(toggleBtns);
+
+toggleBtns.forEach((btn) => {    
+    btn.addEventListener("click", () =>{
+        let onClickBtn = parseInt(btn.innerHTML);
+        let nextTheme = (onClickBtn % 3 + 1).toString();
+        btn.hidden = true;        
+        toggleBtns[parseInt(nextTheme) - 1].hidden = false;             
+        bodyElement.classList = [];
+        bodyElement.classList.add("theme-" + nextTheme);              
+    });
+});

@@ -43,6 +43,9 @@ body {
   color: hsl(6, 63%, 50%);
   border: none;
 }
+.theme-1 .selection button:hover {
+  filter: brightness(140%);
+}
 .theme-1 .btn-area {
   background-color: hsl(223, 31%, 20%);
   border-radius: 30px;
@@ -137,6 +140,9 @@ body {
   color: hsl(25, 98%, 40%);
   border: none;
 }
+.theme-2 .selection button:hover {
+  filter: brightness(140%);
+}
 .theme-2 .btn-area {
   background-color: hsl(0, 5%, 81%);
   border-radius: 30px;
@@ -230,6 +236,9 @@ body {
   background-color: hsl(176, 100%, 44%);
   color: hsl(176, 100%, 44%);
   border: none;
+}
+.theme-3 .selection button:hover {
+  filter: brightness(140%);
 }
 .theme-3 .btn-area {
   background-color: hsl(268, 71%, 12%);
