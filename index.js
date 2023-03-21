@@ -121,7 +121,6 @@ deleteKey.addEventListener("click", () => {
     adjustText(textOnScreen);
 });
 
-console.log(toggleBtns);
 
 toggleBtns.forEach((btn) => {    
     btn.addEventListener("click", () =>{
