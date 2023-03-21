@@ -1,8 +1,9 @@
 @import "./variables";
-@import  "./mobile";
+@import "./mobile";
+@import "./desktop";
 
-body{
-    font-family: $font-family;         
+body {
+    font-family: $font-family;
 }
 
 .theme-1 {
@@ -19,6 +20,18 @@ body{
         $theme1-text-grayish-blue,
         $theme1-key-shadow-grayish-orange,
         $theme1-key-toggle-background-red );
+
+    @include desktop($theme1-screen-background,
+        $theme1-toggle-keypad-background,
+        $theme1-key-background-dark-blue,
+        $theme1-key-shadow-dark-blue,
+        $theme1-key-toggle-background-red,
+        $theme1-key-shadow-dark-red,
+        $white,
+        $theme1-key-background-grayish-orange,
+        $theme1-text-grayish-blue,
+        $theme1-key-shadow-grayish-orange,
+        $theme1-key-toggle-background-red);
 }
 
 .theme-2 {
@@ -35,12 +48,34 @@ body{
         $theme2-text-grayish-yellow,
         $theme2-key-shadow-grayish-orange,
         $theme2-key-toggle-background-orange );
+    @include desktop($theme2-screen-background,
+        $theme2-toggle-keypad-background,
+        $theme2-key-background-cyan,
+        $theme2-key-shadow-cyan,
+        $theme2-key-toggle-background-orange,
+        $theme2-key-shadow-orange,
+        $white,
+        $theme2-key-background-grayish-yellow,
+        $theme2-text-grayish-yellow,
+        $theme2-key-shadow-grayish-orange,
+        $theme2-key-toggle-background-orange );
 }
 
 .theme-3 {
     background-color: $theme3-main-background;
     color: $theme3-text-light-yellow;
     @include mobile($theme3-toggle-keypad-background,
+        $theme3-toggle-keypad-background,
+        $theme3-key-background-dark-violet,
+        $theme3-key-shadow-vivid-magenta,
+        $theme3-key-toggle-background-cyan,
+        $theme3-key-shadow-cyan,
+        #6B34AC,
+        $theme3-key-background-very-dark-violet,
+        $theme3-text-light-yellow,
+        $theme3-key-shadow-dark-magenta,
+        $theme3-key-toggle-background-cyan );
+    @include desktop($theme3-toggle-keypad-background,
         $theme3-toggle-keypad-background,
         $theme3-key-background-dark-violet,
         $theme3-key-shadow-vivid-magenta,

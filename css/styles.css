@@ -1,8 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap");
 body {
   padding: 5% 0%;
 }
 
+body {
+  padding: 5% 0%;
+}
+
+@media (min-width: 1200px) {
+  body {
+    padding: 5% 30%;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  body {
+    padding: 5% 25%;
+  }
+}
+@media (min-width: 900px) and (max-width: 1000px) {
+  body {
+    padding: 5% 20%;
+  }
+}
 body {
   font-family: "League Spartan", sans-serif;
 }
@@ -103,6 +123,108 @@ body {
 .theme-1 .square-key.equal-key:hover {
   filter: brightness(140%);
 }
+@media (min-width: 600px) {
+  .theme-1 { /*theme selection*/
+    /*screen*/
+    /*buttons area*/
+  }
+  .theme-1 .theme-selection h1 {
+    margin-left: 4%;
+  }
+  .theme-1 .theme-btn {
+    text-align: right;
+    padding: 0;
+    margin-right: -20%;
+    width: 80%;
+  }
+  .theme-1 .theme-btn div {
+    font-size: 0.65rem;
+  }
+  .theme-1 .theme-btn p {
+    font-size: 0.6rem;
+    margin: 0;
+  }
+  .theme-1 .theme-btn .col-1 {
+    margin-right: -40%;
+  }
+  .theme-1 .selection {
+    text-align: right;
+    height: 100%;
+    padding: 0;
+    border-radius: 10px;
+  }
+  .theme-1 .selection .col {
+    padding: 0;
+    margin: 0;
+  }
+  .theme-1 .selection button {
+    border-radius: 50%;
+    background-color: hsl(6, 63%, 50%);
+    color: hsl(6, 63%, 50%);
+    border: none;
+  }
+  .theme-1 .selection button:hover {
+    filter: brightness(140%);
+  }
+  .theme-1 .btn-area {
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 30px;
+    padding: 7% 0%;
+  }
+  .theme-1 .screen {
+    font-size: 41.6px;
+    justify-content: right;
+    padding: 5%;
+    margin: 10%;
+    margin-top: 5%;
+    border-radius: 10px;
+    background-color: hsl(224, 36%, 15%);
+    min-height: 15vh;
+  }
+  .theme-1 .screen p {
+    margin: 0;
+  }
+  .theme-1 .buttons-area {
+    margin: 10%;
+  }
+  .theme-1 .buttons-area .container {
+    padding: 7% 10%;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 10px;
+  }
+  .theme-1 .square-key {
+    background-color: hsl(30, 25%, 89%);
+    padding: 1%;
+    color: hsl(221, 14%, 31%);
+    margin: 3% 2%;
+    border-radius: 8px;
+    font-size: 32px;
+    box-shadow: 0px 4px 0px hsl(28, 16%, 65%);
+  }
+  .theme-1 .square-key:hover {
+    background-color: hsl(0, 0%, 100%);
+  }
+  .theme-1 .square-key.specical-key {
+    font-size: 15px;
+    background-color: hsl(225, 21%, 49%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 4px 0px hsl(224, 28%, 35%);
+  }
+  .theme-1 .square-key.specical-key .col {
+    padding: 0;
+  }
+  .theme-1 .square-key.specical-key:hover {
+    filter: brightness(140%);
+  }
+  .theme-1 .square-key.equal-key {
+    background-color: hsl(6, 63%, 50%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 4px 0px hsl(6, 70%, 34%);
+  }
+  .theme-1 .square-key.equal-key:hover {
+    filter: brightness(140%);
+  }
+}
 
 .theme-2 {
   background-color: hsl(0, 0%, 90%);
@@ -200,6 +322,109 @@ body {
 .theme-2 .square-key.equal-key:hover {
   filter: brightness(140%);
 }
+@media (min-width: 600px) {
+  .theme-2 {
+    /*theme selection*/
+    /*screen*/
+    /*buttons area*/
+  }
+  .theme-2 .theme-selection h1 {
+    margin-left: 4%;
+  }
+  .theme-2 .theme-btn {
+    text-align: right;
+    padding: 0;
+    margin-right: -20%;
+    width: 80%;
+  }
+  .theme-2 .theme-btn div {
+    font-size: 0.65rem;
+  }
+  .theme-2 .theme-btn p {
+    font-size: 0.6rem;
+    margin: 0;
+  }
+  .theme-2 .theme-btn .col-1 {
+    margin-right: -40%;
+  }
+  .theme-2 .selection {
+    text-align: right;
+    height: 100%;
+    padding: 0;
+    border-radius: 10px;
+  }
+  .theme-2 .selection .col {
+    padding: 0;
+    margin: 0;
+  }
+  .theme-2 .selection button {
+    border-radius: 50%;
+    background-color: hsl(25, 98%, 40%);
+    color: hsl(25, 98%, 40%);
+    border: none;
+  }
+  .theme-2 .selection button:hover {
+    filter: brightness(140%);
+  }
+  .theme-2 .btn-area {
+    background-color: hsl(0, 5%, 81%);
+    border-radius: 30px;
+    padding: 7% 0%;
+  }
+  .theme-2 .screen {
+    font-size: 41.6px;
+    justify-content: right;
+    padding: 5%;
+    margin: 10%;
+    margin-top: 5%;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 93%);
+    min-height: 15vh;
+  }
+  .theme-2 .screen p {
+    margin: 0;
+  }
+  .theme-2 .buttons-area {
+    margin: 10%;
+  }
+  .theme-2 .buttons-area .container {
+    padding: 7% 10%;
+    background-color: hsl(0, 5%, 81%);
+    border-radius: 10px;
+  }
+  .theme-2 .square-key {
+    background-color: hsl(45, 7%, 89%);
+    padding: 1%;
+    color: hsl(60, 10%, 19%);
+    margin: 3% 2%;
+    border-radius: 8px;
+    font-size: 32px;
+    box-shadow: 0px 4px 0px hsl(35, 11%, 61%);
+  }
+  .theme-2 .square-key:hover {
+    background-color: hsl(0, 0%, 100%);
+  }
+  .theme-2 .square-key.specical-key {
+    font-size: 15px;
+    background-color: hsl(185, 42%, 37%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 4px 0px hsl(185, 58%, 25%);
+  }
+  .theme-2 .square-key.specical-key .col {
+    padding: 0;
+  }
+  .theme-2 .square-key.specical-key:hover {
+    filter: brightness(140%);
+  }
+  .theme-2 .square-key.equal-key {
+    background-color: hsl(25, 98%, 40%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 4px 0px hsl(25, 99%, 27%);
+  }
+  .theme-2 .square-key.equal-key:hover {
+    filter: brightness(140%);
+  }
+}
 
 .theme-3 {
   background-color: hsl(268, 75%, 9%);
@@ -296,4 +521,107 @@ body {
 }
 .theme-3 .square-key.equal-key:hover {
   filter: brightness(140%);
+}
+@media (min-width: 600px) {
+  .theme-3 {
+    /*theme selection*/
+    /*screen*/
+    /*buttons area*/
+  }
+  .theme-3 .theme-selection h1 {
+    margin-left: 4%;
+  }
+  .theme-3 .theme-btn {
+    text-align: right;
+    padding: 0;
+    margin-right: -20%;
+    width: 80%;
+  }
+  .theme-3 .theme-btn div {
+    font-size: 0.65rem;
+  }
+  .theme-3 .theme-btn p {
+    font-size: 0.6rem;
+    margin: 0;
+  }
+  .theme-3 .theme-btn .col-1 {
+    margin-right: -40%;
+  }
+  .theme-3 .selection {
+    text-align: right;
+    height: 100%;
+    padding: 0;
+    border-radius: 10px;
+  }
+  .theme-3 .selection .col {
+    padding: 0;
+    margin: 0;
+  }
+  .theme-3 .selection button {
+    border-radius: 50%;
+    background-color: hsl(176, 100%, 44%);
+    color: hsl(176, 100%, 44%);
+    border: none;
+  }
+  .theme-3 .selection button:hover {
+    filter: brightness(140%);
+  }
+  .theme-3 .btn-area {
+    background-color: hsl(268, 71%, 12%);
+    border-radius: 30px;
+    padding: 7% 0%;
+  }
+  .theme-3 .screen {
+    font-size: 41.6px;
+    justify-content: right;
+    padding: 5%;
+    margin: 10%;
+    margin-top: 5%;
+    border-radius: 10px;
+    background-color: hsl(268, 71%, 12%);
+    min-height: 15vh;
+  }
+  .theme-3 .screen p {
+    margin: 0;
+  }
+  .theme-3 .buttons-area {
+    margin: 10%;
+  }
+  .theme-3 .buttons-area .container {
+    padding: 7% 10%;
+    background-color: hsl(268, 71%, 12%);
+    border-radius: 10px;
+  }
+  .theme-3 .square-key {
+    background-color: hsl(268, 47%, 21%);
+    padding: 1%;
+    color: hsl(52, 100%, 62%);
+    margin: 3% 2%;
+    border-radius: 8px;
+    font-size: 32px;
+    box-shadow: 0px 4px 0px hsl(290, 70%, 36%);
+  }
+  .theme-3 .square-key:hover {
+    background-color: #6B34AC;
+  }
+  .theme-3 .square-key.specical-key {
+    font-size: 15px;
+    background-color: hsl(281, 89%, 26%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 4px 0px hsl(285, 91%, 52%);
+  }
+  .theme-3 .square-key.specical-key .col {
+    padding: 0;
+  }
+  .theme-3 .square-key.specical-key:hover {
+    filter: brightness(140%);
+  }
+  .theme-3 .square-key.equal-key {
+    background-color: hsl(176, 100%, 44%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: 0px 4px 0px hsl(177, 92%, 70%);
+  }
+  .theme-3 .square-key.equal-key:hover {
+    filter: brightness(140%);
+  }
 }/*# sourceMappingURL=styles.css.map */
