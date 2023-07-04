@@ -44,7 +44,7 @@ Users should be able to:
 - Semantic HTML5 markup
 - SCSS
 - Boostrap 5
-- Vanilla JavaScript
+- Vanilla JavaScript -> TypeScript
 - Mobile-first workflow
 
 ### What I learned
