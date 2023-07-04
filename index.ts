@@ -7,17 +7,19 @@ let deleteKey = document.getElementById("key-delete");
 let equalSign = document.getElementById("equal-sign");
 let resetKey = document.getElementById("reset-calc");
 let textOnScreen = document.getElementById("text-on-screen");
-let startFontSize: number;
-if (textOnScreen != null) {
-    startFontSize = parseFloat(window.getComputedStyle(textOnScreen, null).getPropertyValue('font-size'));
-}
-
 let dotKeyClicked = false;
 let operatorClicked = false;
 let clickedKeys: string[] = [];
 let currentOperator: string | undefined;
 let clickedString: string = "0";
 let inputNum: number;
+let startFontSize: number;
+
+
+if (textOnScreen != null) {
+    startFontSize = parseFloat(window.getComputedStyle(textOnScreen, null).getPropertyValue('font-size'));
+}
+
 
 function processMath(operator: string, a: number, b: number) {
     switch (operator) {
@@ -37,14 +39,18 @@ function adjustText(textOnScreen: HTMLElement) {
     textOnScreen.style.fontSize = (startFontSize * Math.pow(0.7, adjustPara)).toString() + "px";
 }
 
+function adjustDotChar() {
+    if (textOnScreen) {
+        textOnScreen.innerText = clickedString.replace(".", ",");
+        adjustText(textOnScreen);
+    }
+}
+
 keys.forEach((key) => {
     key.addEventListener("click", () => {
         clickedKeys.push(key.innerHTML);
         clickedString = clickedKeys.reduce((a, b) => { return a + b; });
-        if (textOnScreen) {
-            textOnScreen.innerText = clickedString.replace(".", ",");
-            adjustText(textOnScreen);
-        }
+        adjustDotChar();
 
     })
 })
@@ -55,8 +61,10 @@ dotKey?.addEventListener("click", () => {
         clickedKeys.push(".");
         dotKeyClicked = true;
         clickedString = clickedKeys.reduce((a, b) => { return a + b; });
-        if (textOnScreen)
+        if (textOnScreen) {
             textOnScreen.innerText = clickedString.replace(".", ",");
+        }
+
     }
 })
 
@@ -78,10 +86,7 @@ operators.forEach((operator) => {
                 inputNum = Math.round(inputNum * 10000000) / 10000000;
                 clickedString = "";
                 clickedKeys = [];
-                if (textOnScreen) {
-                    textOnScreen.innerText = inputNum.toString().replace(".", ",");
-                    adjustText(textOnScreen);
-                }
+                adjustDotChar();
                 currentOperator = operator.innerText;
             }
             else {
@@ -105,10 +110,7 @@ equalSign?.addEventListener("click", () => {
             clickedString = "Invalid value"
         }
         clickedKeys = [];
-        if (textOnScreen) {
-            textOnScreen.innerText = clickedString.replace(".", ",");
-            adjustText(textOnScreen);
-        }
+        adjustDotChar();
         operatorClicked = false;
     }
 });
@@ -137,10 +139,7 @@ deleteKey?.addEventListener("click", () => {
     if (deletedKey == ".") {
         dotKeyClicked = false;
     }
-    if (textOnScreen) {
-        textOnScreen.innerText = clickedString.replace(".", ",");
-        adjustText(textOnScreen);
-    }
+    adjustDotChar();
 
 });
 

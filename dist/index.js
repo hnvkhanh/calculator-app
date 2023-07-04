@@ -8,16 +8,16 @@ let deleteKey = document.getElementById("key-delete");
 let equalSign = document.getElementById("equal-sign");
 let resetKey = document.getElementById("reset-calc");
 let textOnScreen = document.getElementById("text-on-screen");
-let startFontSize;
-if (textOnScreen != null) {
-    startFontSize = parseFloat(window.getComputedStyle(textOnScreen, null).getPropertyValue('font-size'));
-}
 let dotKeyClicked = false;
 let operatorClicked = false;
 let clickedKeys = [];
 let currentOperator;
 let clickedString = "0";
 let inputNum;
+let startFontSize;
+if (textOnScreen != null) {
+    startFontSize = parseFloat(window.getComputedStyle(textOnScreen, null).getPropertyValue('font-size'));
+}
 function processMath(operator, a, b) {
     switch (operator) {
         case '+':
@@ -34,14 +34,17 @@ function adjustText(textOnScreen) {
     let adjustPara = Math.floor(textOnScreen.innerText.length / 8);
     textOnScreen.style.fontSize = (startFontSize * Math.pow(0.7, adjustPara)).toString() + "px";
 }
+function adjustDotChar() {
+    if (textOnScreen) {
+        textOnScreen.innerText = clickedString.replace(".", ",");
+        adjustText(textOnScreen);
+    }
+}
 keys.forEach((key) => {
     key.addEventListener("click", () => {
         clickedKeys.push(key.innerHTML);
         clickedString = clickedKeys.reduce((a, b) => { return a + b; });
-        if (textOnScreen) {
-            textOnScreen.innerText = clickedString.replace(".", ",");
-            adjustText(textOnScreen);
-        }
+        adjustDotChar();
     });
 });
 dotKey === null || dotKey === void 0 ? void 0 : dotKey.addEventListener("click", () => {
@@ -49,8 +52,9 @@ dotKey === null || dotKey === void 0 ? void 0 : dotKey.addEventListener("click",
         clickedKeys.push(".");
         dotKeyClicked = true;
         clickedString = clickedKeys.reduce((a, b) => { return a + b; });
-        if (textOnScreen)
+        if (textOnScreen) {
             textOnScreen.innerText = clickedString.replace(".", ",");
+        }
     }
 });
 operators.forEach((operator) => {
@@ -71,10 +75,7 @@ operators.forEach((operator) => {
                 inputNum = Math.round(inputNum * 10000000) / 10000000;
                 clickedString = "";
                 clickedKeys = [];
-                if (textOnScreen) {
-                    textOnScreen.innerText = inputNum.toString().replace(".", ",");
-                    adjustText(textOnScreen);
-                }
+                adjustDotChar();
                 currentOperator = operator.innerText;
             }
             else {
@@ -97,10 +98,7 @@ equalSign === null || equalSign === void 0 ? void 0 : equalSign.addEventListener
             clickedString = "Invalid value";
         }
         clickedKeys = [];
-        if (textOnScreen) {
-            textOnScreen.innerText = clickedString.replace(".", ",");
-            adjustText(textOnScreen);
-        }
+        adjustDotChar();
         operatorClicked = false;
     }
 });
@@ -126,10 +124,7 @@ deleteKey === null || deleteKey === void 0 ? void 0 : deleteKey.addEventListener
     if (deletedKey == ".") {
         dotKeyClicked = false;
     }
-    if (textOnScreen) {
-        textOnScreen.innerText = clickedString.replace(".", ",");
-        adjustText(textOnScreen);
-    }
+    adjustDotChar();
 });
 toggleBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
