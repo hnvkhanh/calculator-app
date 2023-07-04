@@ -150,8 +150,7 @@ toggleBtns.forEach((btn) => {
         let nextTheme = (onClickBtn % 3 + 1).toString();
         btn.hidden = true;
         toggleBtns[parseInt(nextTheme) - 1].hidden = false;
-        if (bodyElement) {
-            // bodyElement.classList = [];
+        if (bodyElement) {            
             bodyElement.className = "";
             bodyElement.classList.add("theme-" + nextTheme);
         }
